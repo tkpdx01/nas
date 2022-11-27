@@ -1,0 +1,15 @@
+docker run -dit \
+-v opt/ql/config:/ql/config \
+-v opt/ql/scripts:/ql/scripts \
+-v opt/ql/repo:/ql/repo \
+-v opt/ql/log:/ql/log \
+-v opt/ql/db:/ql/db \
+-v opt/ql/jbot:/ql/jbot \
+-v opt/ql/raw:/ql/raw \
+-p 5700:5700 \
+-e ENABLE_HANGUP=true \
+-e ENABLE_WEB_PANEL=true \
+--name qinglong \
+--hostname qinglong \
+--restart always \
+whyour/qinglong:latest
